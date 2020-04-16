@@ -12,7 +12,6 @@
 
 <h1>VISITING DETAILS</h1>
 
-
 <form method="post" action="visiting.jsp">
 	<table>
 		<tr><th>Hospital Name :</th><th> <input type="text" name="hospital_name"></th></tr>
