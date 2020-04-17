@@ -76,7 +76,7 @@ public class Visit {
 		
 	}
 
-	
+
 	public String updateVisits(String visiting_id, String hospital_name, String hospital_city, String date, String time,String noPatients) 
 	{
 		String output = "";  
