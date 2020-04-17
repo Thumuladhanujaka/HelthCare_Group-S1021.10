@@ -44,7 +44,7 @@ public class Visit {
 		  // create a prepared statement  
 		String query = "insert into doctor_visiting values(?, ?, ?, ?, ?,?)"; 
 		 
-		PreparedStatement preparedStmt = (PreparedStatement) con.prepareStatement(query); 
+		PreparedStatement preparedStmt = con.prepareStatement(query); 
 		 
 		  // binding values  
 		  preparedStmt.setInt(1, 0);  
@@ -76,6 +76,53 @@ public class Visit {
 		
 	}
 
+	
+	public String updateVisits(String visiting_id, String hospital_name, String hospital_city, String date, String time,String noPatients) 
+	{
+		String output = "";  
+		 try  
+		 {
+			 Connection con = connect(); 
+			 if (con == null) 
+			 { 
+				 return "\nError while connecting to the database";  
+			 } 
+		 
+		  // create a prepared statement  
+		String query = "update doctor_visiting set hospital_name=?, hospital_city=?, date=?,time= ?,noPatients= ? where visiting_id=?"; 
+		 
+		PreparedStatement preparedStmt = con.prepareStatement(query); 
+		 
+		  // binding values  
+		  preparedStmt.setInt( 1,Integer.parseInt(visiting_id) );
+		  preparedStmt.setString(2,hospital_name);  
+		  preparedStmt.setString(3, hospital_city);  
+		  preparedStmt.setString(4, date); 
+		  preparedStmt.setString(5, time); 
+		  preparedStmt.setInt( 6,Integer.parseInt(noPatients)); 
+
+		//execute the statement
+		  preparedStmt.execute();
+		  con.close(); 
+		  
+		  output = "\nUpdated successfullyyyy";  
+			 System.out.print("Updated");  
+
+		} 
+		catch(Exception e) 
+		{  
+			 output= "\nError while updatinaaag"; 
+			 System.err.println(e.getMessage()); 
+			 System.out.println("not ups");  
+
+		} 
+		 
+		 return output;
+		 
+		
+	}
+	
+	
 	public String readVisits()
 	{
 		String output = "";  
@@ -181,6 +228,10 @@ public class Visit {
 		}
 		return output;
 	} 
+	
+	
+	
+	
 
 
 }
