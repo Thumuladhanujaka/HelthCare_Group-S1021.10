@@ -44,7 +44,6 @@ public class Visit {
 			preparedStmt.setInt(1, 0);
 			preparedStmt.setString(2, hospital_name);
 			preparedStmt.setString(3, hospital_city);
-			// preparedStmt.setDouble(4, Double.parseDouble(price));
 			preparedStmt.setString(4, date);
 			preparedStmt.setString(5, time);
 			preparedStmt.setString(6, noPatients);
@@ -54,7 +53,6 @@ public class Visit {
 			con.close();
 
 			output = "\nInserted successfully";
-			System.out.print("inserted");
 
 		} catch (Exception e) {
 			output = "\nError while inserting";
@@ -67,8 +65,7 @@ public class Visit {
 
 	}
 
-	public String updateVisits(String visiting_id, String hospital_name, String hospital_city, String date, String time,
-			String noPatients) {
+	public String updateVisits(String visiting_id, String hospital_name, String hospital_city, String date, String time,String noPatients) {
 		String output = "";
 		try {
 			Connection con = connect();
@@ -134,23 +131,18 @@ public class Visit {
 				String noPatients = rs.getString("noPatients");
 
 				// Add into the html table *************************************************************************************
-				output += "<tr><td><input id=\"hidItemIDUpdate\" name=\"hidItemIDUpdate\"     type=\"hidden\" value=\""
+				output += "<tr><td><input id=\"hidVisitIDUpdate\" name=\"hidVisitIDUpdate\"     type=\"hidden\" value=\""
 						+ visiting_id + "\">" + hospitalName + "</td>";
-				//output += "<tr><td>" + hospitalName + "</td>";
 				output += "<td>" + city + "</td>";
 				output += "<td>" + date + "</td>";
 				output += "<td>" + time + "</td>";
 				output += "<td>" + noPatients + "</td>";
 
 				// buttons (remove update ) *************************************************************************************
-				output += "<td><input name=\"btnUpdate\" type=\"button\"    value=\"Update\" "
-						+ "class=\"btnUpdate btn btn-secondary\"></td>"
-						//+ "<td><input name=\"btnUpdate\" " + " type=\"button\" value=\"Update\"></td>"
+				output += "<td><input name=\"btnUpdate\" type=\"button\"    value=\"Update\" class=\"btnUpdate btn btn-secondary\"></td>"
 						+ "<td><form method=\"post\" action=\"visits.jsp\">" + "<input name=\"btnRemove\" "
 						+ " type=\"submit\" value=\"Remove\" class=\"btn btn-danger\"> >" 
-						//+ "<input name=\"visiting_id\" type=\"hidden\" "
-					//	+ " value=\"" + visiting_id + "\">" 
-				+ "<input name=\"hidItemIDDelete\" type=\"hidden\" value=\"" + visiting_id + "\">" + "</form></td></tr>"; 
+				+ "<input name=\"hidVisitIDDelete\" type=\"hidden\" value=\"" + visiting_id + "\">" + "</form></td></tr>"; 
 			}
 
 			con.close();
@@ -188,6 +180,7 @@ public class Visit {
 			con.close();
 
 			output = "Deleted successfully";
+
 		} catch (Exception e) {
 			output = "Error while deleting the item.";
 			System.err.println(e.getMessage());

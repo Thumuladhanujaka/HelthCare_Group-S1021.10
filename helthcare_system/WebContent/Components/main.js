@@ -7,7 +7,8 @@ $(document).ready(function() {
 });
 
 // SAVE ============================================
-$(document).on("click","#btnSave",function(event) {
+$(document).on("click","#btnSave",function(event) 
+		{
 			// Clear status msges-------------
 			$("#alertSuccess").text("");
 			$("#alertSuccess").hide();
@@ -34,7 +35,17 @@ $(document).on("click","#btnSave",function(event) {
 			$("#alertSuccess").show();
 			$("#formStudent")[0].reset();*/
 		});
+//UPDATE==========================================
+$(document).on("click",".btnUpdate",function(event) 
+		{
+			$("#hidVisitIDSave").val($(this).closest("tr").find('#hidVisitIDUpdate').val());
+			$("#hospital_name").val($(this).closest("tr").find('td:eq(0)').text());
+			$("#hospital_city").val($(this).closest("tr").find('td:eq(1)').text());
+			$("#date").val($(this).closest("tr").find('td:eq(2)').text());
+			$("#time").val($(this).closest("tr").find('td:eq(3)').text());
+			$("#noPatients").val($(this).closest("tr").find('td:eq(3)').text());
 
+		});
 // REMOVE==========================================
 $(document).on("click", ".remove", function(event) {
 	$(this).closest(".student").remove();
