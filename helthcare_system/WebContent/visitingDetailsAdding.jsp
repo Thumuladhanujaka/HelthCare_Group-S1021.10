@@ -16,83 +16,52 @@
 		<div class="row">
 			<div class="col-8">
 
-				<h1 class="m-3">Visiting Details</h1>
+				<h1 class="m-3">Student details</h1>
 
 				<form id="formStudent">
-				
-					<!-- hospital name -->
-					<div class="input-group input-group-sm mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Hospital Name: </span>
-						</div>
-						<input type="text" id="txtName" name="txtName">
-					</div>
-					
-					<!-- hospital name -->
-					<div class="input-group input-group-sm mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Hospital City: </span>
-						</div>
-						<input type="text" id="txtName" name="txtName">
-					</div>
-					
-					<!-- date -->
-					<div class="input-group input-group-sm mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Date: </span>
-						</div>
-						<input type="text" id="txtName" name="txtName">
-					</div>
-					
-					<!-- no of patients -->
-					<div class="input-group input-group-sm mb-3">
-						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">No. of Patients: </span>
-						</div>
-						<input type="text" id="txtName" name="txtName">
-					</div>
-					
 
+					<!-- NAME -->
+					<div class="input-group input-group-sm mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Name: </span>
+						</div>
+						<input type="text" id="txtName" name="txtName">
+					</div>
 					<!-- GENDER -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Gender : </span>
+							<span class="input-group-text" id="lblName">Gender: </span>
 						</div>
 						&nbsp;&nbsp;Male <input type="radio" id="rdoGenderMale"
 							name="rdoGender" value="Male"> &nbsp;&nbsp;Female <input
 							type="radio" id="rdoGenderFemale" name="rdoGender" value="Female">
 					</div>
-
 					<!-- YEAR -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Visiting Time : </span>
+							<span class="input-group-text" id="lblName">Year: </span>
 						</div>
 						<select id="ddlYear" name="ddlYear">
-							<option value="0">--Time Period--</option>
-							<option value="1">6.00 - 9.00 AM</option>
-							<option value="2">9.00 - 12.00 AM</option>
-							<option value="3">12.00 - 3.00 PM</option>
-							<option value="4">3.00 - 6.00 PM</option>
+							<option value="0">--Select year--</option>
+							<option value="1">1st year</option>
+							<option value="2">2nd year</option>
+							<option value="3">3rd year</option>
+							<option value="4">4th year</option>
 						</select>
 					</div>
-
 					<div id="alertSuccess" class="alert alert-success"></div>
 					<div id="alertError" class="alert alert-danger"></div>
-
-					<input type="button" id="btnSave" value="Submit "
+					<input type="button" id="btnSave" value="Save"
 						class="btn btn-primary">
 				</form>
 			</div>
 		</div>
-		<br>
 
+		<br>
 
 		<div class="row">
 			<div class="col-12" id="colStudents"></div>
-			
 		</div>
-
 	</div>
 </body>
 

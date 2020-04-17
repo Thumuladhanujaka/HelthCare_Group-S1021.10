@@ -1,11 +1,13 @@
 $(document).ready(function() {
-	$("#alertSuccess").hide();
+	if ($("#alertSuccess").text().trim() == "")  
+	{  
+		$("#alertSuccess").hide();  
+	}  
 	$("#alertError").hide();
 });
 
 // SAVE ============================================
-$(document).on("click","#btnSave",function(event) 
-{
+$(document).on("click","#btnSave",function(event) {
 			// Clear status msges-------------
 			$("#alertSuccess").text("");
 			$("#alertSuccess").hide();
@@ -22,56 +24,46 @@ $(document).on("click","#btnSave",function(event)
 				return;
 			}
 
-			// If valid-----------------------
-			var student = getStudentCard($("#txtName").val().trim(), $(
+			// If valid----------------------
+			$("#formStudent").submit();
+		/*	var student = getStudentCard($("#txtName").val().trim(), $(
 					'input[name="rdoGender"]:checked').val(), $("#ddlYear")
 					.val());
 			$("#colStudents").append(student);
 			$("#alertSuccess").text("Saved successfully.");
 			$("#alertSuccess").show();
-			$("#formStudent")[0].reset();
+			$("#formStudent")[0].reset();*/
 		});
 
+// REMOVE==========================================
+$(document).on("click", ".remove", function(event) {
+	$(this).closest(".student").remove();
+	$("#alertSuccess").text("Removed successfully.");
+	$("#alertSuccess").show();
+});
+
+// CLIENT-MODEL=================================================================
 function validateItemForm() {
 	// NAME
 	if ($("#txtName").val().trim() == "") {
 		return "Insert student name.";
 	}
 
-	// city
-	if ($("#txtName").val().trim() == "") {
-		return "Insert student name.";
-	}
-	// date
-	if ($("#txtName").val().trim() == "") {
-		return "Insert student name.";
-	}
-	
-	// time
-	if ($("#ddlYear").val() == "0") {
-		return "Select year.";
-	}
-	
-	
-	// no of patients
-	if ($("#txtName").val().trim() == "") {
-		return "Insert student name.";
-	}
-	
-	
 	// GENDER
 	if ($('input[name="rdoGender"]:checked').length === 0) {
 		return "Select gender.";
 	}
 
-	
+	// YEAR
+	if ($("#ddlYear").val() == "0") {
+		return "Select year.";
+	}
 
 	return true;
 }
 
 function getStudentCard(name, gender, year) {
 	var title = (gender == "Male") ? "Mr." : "Ms.";
-
 	var yearNumber = "";
 
 	switch (year) {
@@ -85,12 +77,12 @@ function getStudentCard(name, gender, year) {
 		yearNumber = "3rd";
 		break;
 	case "4":
-		yearNumber = "sddas";
+		yearNumber = "4th";
 		break;
 	}
 
 	var student = "";
-	student += "<div class=\"student card bg-light m-2\"        style=\"max-width: 10rem; float: left;\">";
+	student += "<div class=\"student card bg-light m-2\"       style=\"max-width: 10rem; float: left;\">";
 	student += "<div class=\"card-body\">";
 	student += title + " " + name + ",";
 	student += "<br>";
@@ -101,12 +93,3 @@ function getStudentCard(name, gender, year) {
 
 	return student;
 }
-
-
-//remove
-$(document).on("click", ".remove", function(event) 
-{
-	$(this).closest(".student").remove();
-	$("#alertSuccess").text("Removed successfully.");
-	$("#alertSuccess").show();
-});
