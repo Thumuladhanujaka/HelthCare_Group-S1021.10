@@ -94,12 +94,13 @@ public class Visit {
 		PreparedStatement preparedStmt = con.prepareStatement(query); 
 		 
 		  // binding values  
-		  preparedStmt.setInt( 1,Integer.parseInt(visiting_id) );
-		  preparedStmt.setString(2,hospital_name);  
-		  preparedStmt.setString(3, hospital_city);  
-		  preparedStmt.setString(4, date); 
-		  preparedStmt.setString(5, time); 
-		  preparedStmt.setInt( 6,Integer.parseInt(noPatients)); 
+		  preparedStmt.setString(1,hospital_name);  
+		  preparedStmt.setString(2, hospital_city);  
+		  preparedStmt.setString(3, date); 
+		  preparedStmt.setString(4, time); 
+		  preparedStmt.setInt( 5,Integer.parseInt(noPatients)); 
+		  preparedStmt.setInt( 6,Integer.parseInt(visiting_id) );
+
 
 		//execute the statement
 		  preparedStmt.execute();
