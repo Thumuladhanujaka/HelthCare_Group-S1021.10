@@ -61,7 +61,9 @@
 
 	<form id="formVisit" name="formVisit" method="post" action="visits.jsp">
 	
-		 <!-- NAME -->
+	
+		
+					<!-- NAME -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="lblName">Hospital Name:
@@ -70,18 +72,16 @@
 						<input type="text" id="hospital_name" name="hospital_name">
 					</div>
 					
-		 <!-- Hospital City: <input id="hospital_city" name="hospital_city" type="text" class="form-control form-control-sm"> <br> -->
-		 <!-- CITY -->
+		 			<!-- CITY -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Hospital City:
+							<span class="input-group-text" id="lblName">Hospital City :
 							</span>
 						</div>
 						<input type="text" id="hospital_city" name="hospital_city">
 					</div>
 					
-		 <!--  Date: <input id="date" name="date" type="text" class="form-control form-control-sm"> <br> -->
-		 <!-- Date -->
+		 			<!-- Date -->
 					<div class="input-group input-group-sm mb-3">
 
 						<div class="input-group-prepend">
@@ -90,32 +90,31 @@
 						<input type="text" id="date" name="date">
 					</div>
 		 
-		 <!--  Time: <input id="time" name="time" type="text" class="form-control form-control-sm"> <br> -->
-		 <!-- Date -->
+		 			<!-- Time -->
 					<div class="input-group input-group-sm mb-3">
-
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Time: </span>
+							<span class="input-group-text" id="lblName">Visiting Time: </span>
 						</div>
-						<input type="text" id="time" name="time">
+						<select id="time" name="time">
+							<option value="6.00 - 9.00 AM">6.00 - 9.00 AM</option>
+							<option value="9.00 - 12.00 AM">9.00 - 12.00 AM</option>
+							<option value="12.00 - 3.00 PM">12.00 - 3.00 PM</option>
+							<option value="3.00 - 6.00 PM">3.00 - 6.00 PM</option>
+						</select>
+						<!--  <input type="text" id="time" name="time">-->
 					</div>
 		 
-		 
-		 <!--No.of Channells: <input id="noPatients" name="noPatients" type="text" class="form-control form-control-sm"> <br> -->
-		 <div class="input-group input-group-sm mb-3">
+			 		<!-- No. of channels -->	 
+					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="lblName">No. of Channels: </span>
 						</div>
 						<input type="text" id="noPatients" name="noPatients">
 					</div>
-		 
-		 
-		 
-		<!-- <input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> -->
-
 		
 					<div id="alertSuccess" class="alert alert-success"></div>
 					<div id="alertError" class="alert alert-danger"></div>
+					
 					<input name="btnReset" type="reset" value="Reset" class="btn btn-primary"></th></tr>
 					<input	id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary">
 					<input type="hidden"id="hidVisitIDSave" name="hidVisitIDSave" value="">
