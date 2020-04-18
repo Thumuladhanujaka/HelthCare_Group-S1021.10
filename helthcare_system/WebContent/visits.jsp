@@ -10,7 +10,6 @@
 	if (request.getParameter("hospital_name") != null)
 	{ 
 	Visit visitObj = new Visit();  
-	//visitObj.connect();
 	String stsMsg ="";		
 	
 	

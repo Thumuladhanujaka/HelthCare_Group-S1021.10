@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
-	if ($("#alertSuccess").text().trim() == "")  
+	/*if ($("#alertSuccess").text().trim() == "")  
 	{  
 		$("#alertSuccess").hide();  
-	}  
+	}  */
 	$("#alertSuccess").hide(); 
 	$("#alertError").hide();
 });
@@ -26,7 +26,7 @@ $(document).on("click","#btnSave",function(event)
 				$("#alertError").show();
 				return;
 			}
-
+			$("#alertSuccess").text("Saved successfully.");
 			
 			// If valid----------------------
 			$("#formVisit").submit();
@@ -48,17 +48,18 @@ $(document).on("click",".btnUpdate",function(event)
 			$("#date").val($(this).closest("tr").find('td:eq(2)').text());
 			$("#time").val($(this).closest("tr").find('td:eq(3)').text());
 			$("#noPatients").val($(this).closest("tr").find('td:eq(4)').text());
-
+			$("#alertSuccess").text("Up successfully.");
 		});
 
 
 //REMOVE========================================== 
-$(document).on("click", ".remove", function(event) 
+$(document).on("click", ".btnRemove", function(event) 
 { 
-	$(this).closest(".visit").remove();  
-	$("#alertSuccess").text("aaaRemoved successfully.");
+	$(this).closest(".visit").btnRemove();  
+	$("#alertSuccess").text("Removed successfully.");
 	$("#alertSuccess").show();
 }); 
+
 
 // CLIENT-MODEL=================================================================
 function validateVisitForm() 

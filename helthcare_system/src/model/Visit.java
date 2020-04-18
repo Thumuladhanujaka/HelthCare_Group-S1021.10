@@ -51,10 +51,10 @@ public class Visit {
 			preparedStmt.execute();
 			con.close();
 
-			output = "\nInserted successfully";
+			output = "\nYou have Inserted successfully";
 
 		} catch (Exception e) {
-			output = "\nError while inserting";
+			output = "\nError while inserting12";
 			System.err.println(e.getMessage());
 			System.out.println("not inserted");
 
@@ -89,11 +89,11 @@ public class Visit {
 			preparedStmt.execute();
 			con.close();
 
-			output = "\nUpdated successfully";
+			output = "\nYou have Updated successfully";
 			System.out.print("Updated");
 
 		} catch (Exception e) {
-			output = "\nError while updatinaaag";
+			output = "\nError while updatinf";
 			System.err.println(e.getMessage());
 			System.out.println("not ups");
 
@@ -178,7 +178,7 @@ public class Visit {
 			preparedStmt.execute();
 			con.close();
 
-			output = "Deleted successfully";
+			output = "You have Deleted successfully";
 			
 
 		} catch (Exception e) {
