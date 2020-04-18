@@ -1,10 +1,10 @@
 
 $(document).ready(function() {
-	/*if ($("#alertSuccess").text().trim() == "")  
+	if ($("#alertSuccess").text().trim() == "")  
 	{  
 		$("#alertSuccess").hide();  
-	}  */
-	$("#alertSuccess").hide(); 
+	}  
+	//$("#alertSuccess").hide(); 
 	$("#alertError").hide();
 });
 
@@ -26,17 +26,11 @@ $(document).on("click","#btnSave",function(event)
 				$("#alertError").show();
 				return;
 			}
-			$("#alertSuccess").text("Saved successfully.");
+			//$("#alertSuccess").text("Saved successfully.");
 			
 			// If valid----------------------
 			$("#formVisit").submit();
-		/*
-		 * var student = getStudentCard($("#txtName").val().trim(), $(
-		 * 'input[name="rdoGender"]:checked').val(), $("#ddlYear") .val());
-		 * $("#colStudents").append(student); $("#alertSuccess").text("Saved
-		 * successfully."); $("#alertSuccess").show();
-		 * $("#formStudent")[0].reset();
-		 */
+	
 		});
 
 // UPDATE==========================================
@@ -48,7 +42,7 @@ $(document).on("click",".btnUpdate",function(event)
 			$("#date").val($(this).closest("tr").find('td:eq(2)').text());
 			$("#time").val($(this).closest("tr").find('td:eq(3)').text());
 			$("#noPatients").val($(this).closest("tr").find('td:eq(4)').text());
-			$("#alertSuccess").text("Up successfully.");
+			//$("#alertSuccess").text("Up successfully.");
 		});
 
 

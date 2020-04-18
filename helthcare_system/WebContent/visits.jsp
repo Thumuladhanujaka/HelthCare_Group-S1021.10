@@ -23,7 +23,11 @@
 	} else//Update----------------------
 	{
 		stsMsg = visitObj.updateVisits(request.getParameter("hidVisitIDSave"),
-		request.getParameter("hospital_name"), request.getParameter("hospital_city"), request.getParameter("date"), request.getParameter("time"), request.getParameter("noPatients"));
+		request.getParameter("hospital_name"), 
+		request.getParameter("hospital_city"),
+		request.getParameter("date"), 
+		request.getParameter("time"),
+		request.getParameter("noPatients"));
 	}
 	session.setAttribute("statusMsg", stsMsg);
 		
@@ -54,6 +58,8 @@
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/main.js"></script> 
+
+
 </head>
 <body>
 <h1>Visiting Details Adding</h1>
@@ -63,39 +69,39 @@
 	
 		
 					<!-- NAME -->
-					<div class="input-group input-group-sm mb-3">
+					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Hospital Name:
+							<span class="input-group-text" id="lblName">Hospital Name
 							</span>
 						</div>
 						<input type="text" id="hospital_name" name="hospital_name">
 					</div>
 					
 		 			<!-- CITY -->
-					<div class="input-group input-group-sm mb-3">
+					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Hospital City :
+							<span class="input-group-text" id="lblName"> Hospital City :
 							</span>
 						</div>
 						<input type="text" id="hospital_city" name="hospital_city">
 					</div>
 					
 		 			<!-- Date -->
-					<div class="input-group input-group-sm mb-3">
+					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Date: </span>
+							<span class="input-group-text" id="lblName">Visiting Date : </span>
 						</div>
 						<input type="text" id="date" name="date">
 					</div>
 		 
 		 			<!-- Time -->
-					<div class="input-group input-group-sm mb-3">
+					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Visiting Time: </span>
+							<span class="input-group-text" id="lblName">Visiting Time : </span>
 						</div>
 						<select id="time" name="time">
-							<option value="">Select Time</option>
+							<option value="">----- Select Time -----</option>
 							<option value="6.00 - 9.00 AM">6.00 - 9.00 AM</option>
 							<option value="9.00 - 12.00 AM">9.00 - 12.00 AM</option>
 							<option value="12.00 - 3.00 PM">12.00 - 3.00 PM</option>
@@ -105,9 +111,9 @@
 					</div>
 		 
 			 		<!-- No. of channels -->	 
-					<div class="input-group input-group-sm mb-3">
+					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">No. of Channels: </span>
+							<span class="input-group-text" id="lblName">No.Channels : </span>
 						</div>
 						<input type="text" id="noPatients" name="noPatients">
 					</div>
@@ -115,8 +121,8 @@
 					<div id="alertSuccess" class="alert alert-success"></div>
 					<div id="alertError" class="alert alert-danger"></div>
 					
-					<input name="btnReset" type="reset" value="Reset" class="btn btn-primary"></th></tr>
-					<input	id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary">
+					<input name="btnReset" type="reset" value="Reset" class="btn btn-primary"  style="margin-left: 80px;width: 140px;"></th></tr>
+					<input	id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary" style="width: 140px;">
 					<input type="hidden"id="hidVisitIDSave" name="hidVisitIDSave" value="">
 	</form>
 		<%
