@@ -70,20 +70,20 @@ function validateVisitForm() {
 		return "Select year.";
 	}*/
 if ($("#hospital_name").val().trim() == "") {
-		
+		return "Insert Hospital Name.";
 	}
 	
 	if ($("#hospital_city").val().trim() == "") {
-		
+		return "Insert Hospital City.";
 	}
 	if ($("#date").val().trim() == "") {
-		
+		return "Insert Date.";
 	}
 	if ($("#time").val().trim() == "") {
-		
+		return "Insert Visiting Time.";
 	}
 	if ($("#noPatients").val().trim() == "") {
-		
+		return "Insert No. of Channels.";
 	}
 
 	return true;

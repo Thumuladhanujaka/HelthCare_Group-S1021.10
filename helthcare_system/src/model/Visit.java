@@ -140,7 +140,7 @@ public class Visit {
 				// buttons (remove update ) *************************************************************************************
 				output += "<td><input name=\"btnUpdate\" type=\"button\"    value=\"Update\" class=\"btnUpdate btn btn-secondary\"></td>"
 						+ "<td><form method=\"post\" action=\"visits.jsp\">" + "<input name=\"btnRemove\" "
-						+ " type=\"submit\" value=\"Remove\" class=\"btn btn-danger\"> >" 
+						+ " type=\"submit\" value=\"Remove\" class=\"btn btn-danger\"> " 
 				+ "<input name=\"hidVisitIDDelete\" type=\"hidden\" value=\"" + visiting_id + "\">" + "</form></td></tr>"; 
 			}
 
