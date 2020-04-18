@@ -57,6 +57,5 @@
  <%  ward_details wardObj = new ward_details(); 
  out.print(wardObj.readWard_Details()); %> 
 
-<H1>WARD</H1>
 </body>
 </html>
