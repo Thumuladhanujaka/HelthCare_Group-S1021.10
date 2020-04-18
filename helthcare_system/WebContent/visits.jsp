@@ -96,6 +96,7 @@
 							<span class="input-group-text" id="lblName">Visiting Time: </span>
 						</div>
 						<select id="time" name="time">
+							<option value="">Select Time</option>
 							<option value="6.00 - 9.00 AM">6.00 - 9.00 AM</option>
 							<option value="9.00 - 12.00 AM">9.00 - 12.00 AM</option>
 							<option value="12.00 - 3.00 PM">12.00 - 3.00 PM</option>

@@ -89,7 +89,7 @@ public class Visit {
 			preparedStmt.execute();
 			con.close();
 
-			output = "\nUpdated successfullyyyy";
+			output = "\nUpdated successfully";
 			System.out.print("Updated");
 
 		} catch (Exception e) {
@@ -179,6 +179,7 @@ public class Visit {
 			con.close();
 
 			output = "Deleted successfully";
+			
 
 		} catch (Exception e) {
 			output = "Error while deleting the item.";
