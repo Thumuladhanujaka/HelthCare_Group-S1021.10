@@ -111,6 +111,7 @@
 					</div>
 		 
 			 		<!-- No. of channels -->	 
+			 		
 					<div class="input-group input-group-sm mb-3" style="margin-left: 80px;">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="lblName">No.Channels : </span>
