@@ -24,8 +24,7 @@ public class Visit {
 		return con;
 	}
 
-	public String insertVisits(String hospital_name, String hospital_city, String date, String time,
-			String noPatients) {
+	public String insertVisits(String hospital_name, String hospital_city, String date, String time,String noPatients) {
 
 		String output = "";
 
@@ -124,16 +123,16 @@ public class Visit {
 			// iterate through the rows in the result set
 			while (rs.next()) {
 				String visiting_id = Integer.toString(rs.getInt("visiting_id"));
-				String hospitalName = rs.getString("hospital_name");
-				String city = rs.getString("hospital_city");
+				String hospital_name = rs.getString("hospital_name");
+				String hospital_city = rs.getString("hospital_city");
 				String date = rs.getString("date");
 				String time = rs.getString("time");
 				String noPatients = rs.getString("noPatients");
 
 				// Add into the html table *************************************************************************************
 				output += "<tr><td><input id=\"hidVisitIDUpdate\" name=\"hidVisitIDUpdate\"     type=\"hidden\" value=\""
-						+ visiting_id + "\">" + hospitalName + "</td>";
-				output += "<td>" + city + "</td>";
+						+ visiting_id + "\">" + hospital_name + "</td>";
+				output += "<td>" + hospital_city + "</td>";
 				output += "<td>" + date + "</td>";
 				output += "<td>" + time + "</td>";
 				output += "<td>" + noPatients + "</td>";

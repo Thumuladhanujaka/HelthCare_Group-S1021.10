@@ -16,7 +16,7 @@ $(document).on("click","#btnSave",function(event)
 			$("#alertError").hide();
 
 			// Form validation----------------
-			var status = validateItemForm();
+			var status = validateVisitForm();
 
 			// If not valid-------------------
 			if (status != true) {
@@ -26,7 +26,7 @@ $(document).on("click","#btnSave",function(event)
 			}
 
 			// If valid----------------------
-			$("#formStudent").submit();
+			$("#formVisit").submit();
 		/*	var student = getStudentCard($("#txtName").val().trim(), $(
 					'input[name="rdoGender"]:checked').val(), $("#ddlYear")
 					.val());
@@ -43,7 +43,7 @@ $(document).on("click",".btnUpdate",function(event)
 			$("#hospital_city").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#date").val($(this).closest("tr").find('td:eq(2)').text());
 			$("#time").val($(this).closest("tr").find('td:eq(3)').text());
-			$("#noPatients").val($(this).closest("tr").find('td:eq(3)').text());
+			$("#noPatients").val($(this).closest("tr").find('td:eq(4)').text());
 
 		});
 // REMOVE==========================================
@@ -54,9 +54,9 @@ $(document).on("click", ".remove", function(event) {
 });
 
 // CLIENT-MODEL=================================================================
-function validateItemForm() {
+function validateVisitForm() {
 	// NAME
-	if ($("#txtName").val().trim() == "") {
+	/*if ($("#txtName").val().trim() == "") {
 		return "Insert student name.";
 	}
 
@@ -68,12 +68,28 @@ function validateItemForm() {
 	// YEAR
 	if ($("#ddlYear").val() == "0") {
 		return "Select year.";
+	}*/
+if ($("#hospital_name").val().trim() == "") {
+		
+	}
+	
+	if ($("#hospital_city").val().trim() == "") {
+		
+	}
+	if ($("#date").val().trim() == "") {
+		
+	}
+	if ($("#time").val().trim() == "") {
+		
+	}
+	if ($("#noPatients").val().trim() == "") {
+		
 	}
 
 	return true;
 }
 
-function getStudentCard(name, gender, year) {
+/*function getStudentCard(name, gender, year) {
 	var title = (gender == "Male") ? "Mr." : "Ms.";
 	var yearNumber = "";
 
@@ -103,4 +119,4 @@ function getStudentCard(name, gender, year) {
 	student += "</div>";
 
 	return student;
-}
+}*/
