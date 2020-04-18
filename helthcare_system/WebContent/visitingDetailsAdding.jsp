@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Student details</title>
+<title>Visiting details</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/main.js"></script>
@@ -13,39 +13,62 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8">
-				<h1 class="m-3">Student details</h1>
-				<form id="formStudent">
+				<h1 class="m-3">Doctor Visiting Details</h1>
+				
+				<form id="formVisit">
+				
 					<!-- NAME -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Name: </span>
+							<span class="input-group-text" id="lblName">Hospital Name:
+							</span>
 						</div>
-						<input type="text" id="txtName" name="txtName">
+						<input type="text" id="hospital_name" name="hospital_name">
 					</div>
 
-					<!-- GENDER -->
+					<!-- CITY -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Gender: </span>
+							<span class="input-group-text" id="lblName">Hospital City:
+							</span>
 						</div>
-						&nbsp;&nbsp;Male <input type="radio" id="rdoGenderMale"
-							name="rdoGender" value="Male"> &nbsp;&nbsp;Female <input
-							type="radio" id="rdoGenderFemale" name="rdoGender" value="Female">
+						<input type="text" id="hospital_city" name="hospital_city">
+					</div>
+					
+					<!-- Date -->
+					<div class="input-group input-group-sm mb-3">
+
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Date: </span>
+						</div>
+						<input type="text" id="date" name="date">
 					</div>
 
-					<!-- YEAR -->
+
+					<!-- TIME -->
 					<div class="input-group input-group-sm mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="lblName">Year: </span>
+							<span class="input-group-text" id="lblName">Visiting Time:
+							</span>
 						</div>
-						<select id="ddlYear" name="ddlYear">
-							<option value="0">--Select year--</option>
-							<option value="1">1st year</option>
-							<option value="2">2nd year</option>
-							<option value="3">3rd year</option>
-							<option value="4">4th year</option>
+						<select id="time" name="time">
+							<option value="0">--Select Time--</option>
+							<option value="1">6.00 - 9.00 AM</option>
+							<option value="2">9.00 - 12.00 AM</option>
+							<option value="3">12.00 - 3.00 PM</option>
+							<option value="4">3.00 - 6.00 PM</option>
 						</select>
 					</div>
+					
+					<!-- no. of patients -->
+					<div class="input-group input-group-sm mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">No. of Channels: </span>
+						</div>
+						<input type="text" id="noPatients" name="noPatients">
+					</div>
+
+
 
 					<div id="alertSuccess" class="alert alert-success"></div>
 					<div id="alertError" class="alert alert-danger"></div>
@@ -57,7 +80,7 @@
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-12" id="colStudents"></div>
+			<div class="col-12" id="colVisits"></div>
 		</div>
 
 	</div>

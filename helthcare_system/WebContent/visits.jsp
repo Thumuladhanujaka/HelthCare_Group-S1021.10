@@ -51,7 +51,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Visiting Details</title>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
 <script src="Components/main.js"></script> 
@@ -60,22 +60,66 @@
 <h1>Visiting Details Adding</h1>
 
 	<form id="formVisit" name="formVisit" method="post" action="visits.jsp">
-		 Hospital Name: <input id="hospital_name" name="hospital_name" type="text"	class="form-control form-control-sm"> <br>
-		 Hospital City: <input id="hospital_city" name="hospital_city" type="text" class="form-control form-control-sm"> <br> 
-		 Date: <input id="date" name="date" type="text" class="form-control form-control-sm"> <br> 
-		 Time: <input id="time" name="time" type="text" class="form-control form-control-sm"> <br> 
-		 No.of Channells: <input id="noPatients" name="noPatients" type="text" class="form-control form-control-sm"> <br> 
+	
+		 <!-- NAME -->
+					<div class="input-group input-group-sm mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Hospital Name:
+							</span>
+						</div>
+						<input type="text" id="hospital_name" name="hospital_name">
+					</div>
+					
+		 <!-- Hospital City: <input id="hospital_city" name="hospital_city" type="text" class="form-control form-control-sm"> <br> -->
+		 <!-- CITY -->
+					<div class="input-group input-group-sm mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Hospital City:
+							</span>
+						</div>
+						<input type="text" id="hospital_city" name="hospital_city">
+					</div>
+					
+		 <!--  Date: <input id="date" name="date" type="text" class="form-control form-control-sm"> <br> -->
+		 <!-- Date -->
+					<div class="input-group input-group-sm mb-3">
+
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Date: </span>
+						</div>
+						<input type="text" id="date" name="date">
+					</div>
+		 
+		 <!--  Time: <input id="time" name="time" type="text" class="form-control form-control-sm"> <br> -->
+		 <!-- Date -->
+					<div class="input-group input-group-sm mb-3">
+
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">Time: </span>
+						</div>
+						<input type="text" id="time" name="time">
+					</div>
+		 
+		 
+		 <!--No.of Channells: <input id="noPatients" name="noPatients" type="text" class="form-control form-control-sm"> <br> -->
+		 <div class="input-group input-group-sm mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="lblName">No. of Channels: </span>
+						</div>
+						<input type="text" id="noPatients" name="noPatients">
+					</div>
+		 
+		 
 		 
 		<!-- <input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> -->
-		<!-- <input id="btnSave" name="btnSave" type="submit" value="Save"  class="btn btn-primary">
-		<input name="btnReset" type="reset" value="Reset"></th></tr>
-		<input type="hidden" id="hidVisitIDSave" name="hidVisitIDSave" value=""> -->
+
 		
-		<input	id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary">
-		<input type="hidden"id="hidVisitIDSave" name="hidVisitIDSave" value="">
+					<div id="alertSuccess" class="alert alert-success"></div>
+					<div id="alertError" class="alert alert-danger"></div>
+					<input name="btnReset" type="reset" value="Reset" class="btn btn-primary"></th></tr>
+					<input	id="btnSave" name="btnSave" type="button" value="Save"class="btn btn-primary">
+					<input type="hidden"id="hidVisitIDSave" name="hidVisitIDSave" value="">
 	</form>
-	
-	<div id=alertSuccess" class="alert alert-success">
 		<%
 			out.print(session.getAttribute("statusMsg"));
 		%>
