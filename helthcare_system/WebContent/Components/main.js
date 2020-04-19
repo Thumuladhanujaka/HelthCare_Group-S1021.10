@@ -26,7 +26,6 @@ $(document).on("click","#btnSave",function(event)
 				$("#alertError").show();
 				return;
 			}
-			//$("#alertSuccess").text("Saved successfully.");
 			
 			// If valid----------------------
 			$("#formVisit").submit();
